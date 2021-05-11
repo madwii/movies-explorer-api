@@ -58,9 +58,9 @@ const deleteMovie = (req, res, next) => {
       } else if (!movie.owner.equals(req.user._id)) {
         throw new ForbiddenError('Вы не можете удалять чужие карточки');
       } else {
-        Movie.findByIdAndRemove(req.params._id)
-          .then((movie) => {
-            res.send(movie);
+        movie.remove()
+          .then(() => {
+            res.status(200).send({ message: 'Фильм удален!' });
           });
       }
     })

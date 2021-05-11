@@ -26,10 +26,9 @@ const validateUpdateUser = celebrate({
       }
       return helpers.message('Невалидный email');
     }),
-    name: Joi.string().required(),
+    name: Joi.string().min(2).max(30).required(),
   }),
   headers: Joi.object().keys({
-    authorization: Joi.string().min(2).max(200).required(),
     'content-type': Joi.string().valid('application/json').required(),
   }).unknown(),
 });
@@ -93,7 +92,7 @@ const validateDeleteMovie = celebrate({
     }),
   }),
   headers: Joi.object().keys({
-    authorization: Joi.string().min(2).max(200).required(),
+    'content-type': Joi.string().valid('application/json').required(),
   }).unknown(),
 });
 

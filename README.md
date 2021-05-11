@@ -1,5 +1,5 @@
 # movies-explorer-api
 Репозиторий для приложения проекта `Movies-explorer`, включающий бэкенд части приложения со следующими возможностями: авторизации и регистрации пользователей, операции с фильмами.
   
-## [api.mesto.kor](https://api.movie.kor.nomoredomains.icu) — backend
+## [api.movie.kor](https://api.movie.kor.nomoredomains.icu) — backend
 ## 84.252.139.215 — Публичный IP-адрес

@@ -90,7 +90,7 @@ const login = (req, res, next) => {
       res.status(200).send({ token });
     })
     .catch((err) => {
-      throw new UnAuthError('Ошибка авторизации');
+      throw new UnAuthError('Неправильная почта или пароль');
     })
     .catch(next);
 };
